@@ -1,9 +1,10 @@
 import 'package:app/buttons.dart';
-import 'package:app/register_page.dart';
+import 'package:app/login_page.dart';
 import 'package:app/textfield.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class Register extends StatelessWidget {
+  final namecontroller = TextEditingController();
   final emailcontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
 
@@ -11,7 +12,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Login Page"),
+        title: const Text("Register Page"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(40.0),
@@ -22,9 +23,11 @@ class Login extends StatelessWidget {
               children: <Widget>[
                 const SizedBox(height: 40),
                 const Text(
-                  "Welcome back to the Hub!",
+                  "Welcome to the Hub!",
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
+                const SizedBox(height: 20),
+                StandardTextField(hinttext: "Name", controller: namecontroller),
                 const SizedBox(height: 20),
                 StandardTextField(
                     hinttext: "Email", controller: emailcontroller),
@@ -35,12 +38,12 @@ class Login extends StatelessWidget {
                   obscureText: true,
                 ),
                 const SizedBox(height: 20),
-                StandardButton(text: "Login", onPressed: () {}),
+                StandardButton(text: "Register", onPressed: () {}),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Not a Member?"),
+                    const Text("Already a Member?"),
                     const SizedBox(width: 3),
                     GestureDetector(
                       child: const Text(
@@ -50,7 +53,7 @@ class Login extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Register()),
+                          MaterialPageRoute(builder: (context) => Login()),
                         );
                       },
                     )

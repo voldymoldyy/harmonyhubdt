@@ -12,18 +12,22 @@ class StandardTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8.0),
-          border: Border.all(color: Colors.grey, width: 1.0)),
-      child: TextField(
-        controller: controller,
-        decoration: InputDecoration(
-          hintText: hinttext,
+    return Column(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0),
+              border: Border.all(color: Colors.grey, width: 1.0)),
+          child: TextField(
+            controller: controller,
+            decoration: InputDecoration(
+              hintText: hinttext,
+            ),
+            obscureText: obscureText,
+          ),
         ),
-        obscureText: obscureText,
-      ),
+      ],
     );
   }
 }
