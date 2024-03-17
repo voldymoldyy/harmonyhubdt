@@ -31,7 +31,7 @@ class Register extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Register Page"),
+        title: const Text("Register"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(40.0),

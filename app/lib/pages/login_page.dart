@@ -29,7 +29,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Login Page"),
+        title: const Text("Login"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(40.0),

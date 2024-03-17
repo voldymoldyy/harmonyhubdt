@@ -1,4 +1,4 @@
-import 'package:app/pages/home_page.dart';
+import 'package:app/pages/Main_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +25,7 @@ class AuthService {
       );
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Homepage()),
+        MaterialPageRoute(builder: (context) => MainPage()),
       );
       return userCredential;
     } on FirebaseAuthException catch (e) {
