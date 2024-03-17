@@ -1,7 +1,7 @@
 import 'package:app/pages/ExplorePage.dart';
-import 'package:app/pages/Profile_page.dart';
+import 'package:app/pages/profile/Profile_page.dart';
 import 'package:app/pages/bottom_nav_bar.dart';
-import 'package:app/pages/settingsPage.dart';
+import 'package:app/pages/settings/settingsPage.dart';
 import 'package:flutter/material.dart';
 
 import 'HomePage.dart';
@@ -38,8 +38,8 @@ class _MainPageState extends State<MainPage> {
           });
         },
         children: [
-          HomePage(),
-          ExplorePage(),
+          const HomePage(),
+          const ExplorePage(),
           ProfilePage(),
           SettingsPage(),
         ],

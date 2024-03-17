@@ -1,3 +1,4 @@
+import 'package:app/pages/profile/editprofile.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -26,7 +27,7 @@ class ProfilePage extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Software Developer', // Add your occupation or role here
+              'Student', // Add your occupation or role here
               style: TextStyle(
                 fontSize: 18,
                 color: Colors.grey[700],
@@ -35,7 +36,11 @@ class ProfilePage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Implement edit profile functionality
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => EditProfilePage(),
+                    ));
               },
               child: Text('Edit Profile'),
             ),

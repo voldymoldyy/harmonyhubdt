@@ -16,7 +16,9 @@ class BottomNavBaritem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-          padding: const EdgeInsets.all(13.67),
+          padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * 0.03,
+              vertical: MediaQuery.of(context).size.width * 0.025),
           decoration: BoxDecoration(
               color: isActive ? Colors.blue : null,
               borderRadius: BorderRadius.circular(40)),
