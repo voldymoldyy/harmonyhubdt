@@ -1,3 +1,5 @@
+import 'package:app/components/home_topbutton.dart';
+import 'package:app/components/homeheading.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,6 +11,18 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Home"),
       ),
+      body: SafeArea(
+          child: Column(
+        children: [
+          HomeTopButton(),
+          HomeHeading(
+              title: "Blogs",
+              trailing: TextButton(
+                child: Text('View All'),
+                onPressed: () {},
+              ))
+        ],
+      )),
     );
   }
 }
