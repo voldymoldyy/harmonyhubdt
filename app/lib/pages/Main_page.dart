@@ -37,7 +37,7 @@ class _MainPageState extends State<MainPage> {
             _pageIndex = value;
           });
         },
-        children: const [
+        children: [
           HomePage(),
           ExplorePage(),
           ProfilePage(),

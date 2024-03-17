@@ -1,13 +1,46 @@
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Profile"),
+        title: Text('Profile'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage(
+                  'assets/profile_image.png'), // Add your profile image asset here
+            ),
+            SizedBox(height: 20),
+            Text(
+              'John Doe', // Add your name here
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Software Developer', // Add your occupation or role here
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.grey[700],
+              ),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Implement edit profile functionality
+              },
+              child: Text('Edit Profile'),
+            ),
+          ],
+        ),
       ),
     );
   }
