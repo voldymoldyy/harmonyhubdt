@@ -39,7 +39,7 @@ class _MainPageState extends State<MainPage> {
         },
         children: [
           const HomePage(),
-          const ExplorePage(),
+          ExplorePage(),
           ProfilePage(),
           SettingsPage(),
         ],

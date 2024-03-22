@@ -16,25 +16,26 @@ class BottomNavBaritem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-          decoration: BoxDecoration(
-              color: isActive ? Colors.blue : null,
-              borderRadius: BorderRadius.circular(40)),
-          child: Row(
-            children: [
-              Icon(
-                iconData,
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        decoration: BoxDecoration(
+            color: isActive ? Colors.blue : null,
+            borderRadius: BorderRadius.circular(40)),
+        child: Row(
+          children: [
+            Icon(
+              iconData,
+              color: isActive ? Colors.white : Colors.grey,
+            ),
+            const SizedBox(width: 7.0),
+            Text(
+              text,
+              style: TextStyle(
                 color: isActive ? Colors.white : Colors.grey,
               ),
-              const SizedBox(width: 7.0),
-              Text(
-                text,
-                style: TextStyle(
-                  color: isActive ? Colors.white : Colors.grey,
-                ),
-              ),
-            ],
-          )),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:app/auth/auth_serivce.dart';
 import 'package:app/components/Featured_card.dart';
 import 'package:app/components/home_topbutton.dart';
 import 'package:app/components/homeheading.dart';
+import 'package:app/pages/ExplorePage.dart';
 import 'package:app/pages/blogs/blog1.dart';
 import 'package:app/pages/blogs/blog2.dart';
 import 'package:app/pages/blogs/blog3.dart';
@@ -31,7 +32,12 @@ class HomePage extends StatelessWidget {
               title: "Blogs",
               trailing: TextButton(
                 child: Text('View All'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ExplorePage()),
+                  );
+                },
               ),
             ),
             SizedBox(height: 10), // Add some spacing
@@ -43,7 +49,7 @@ class HomePage extends StatelessWidget {
                 crossAxisSpacing: 10,
                 children: [
                   FeatureCard(
-                    title: "Feature 1",
+                    title: "Culture Blogs",
                     description: "Description of feature 1",
                     onTap: () {
                       Navigator.push(
@@ -53,7 +59,7 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "Feature 2",
+                    title: "Creative Blogs",
                     description: "Description of feature 2",
                     onTap: () {
                       Navigator.push(context,
@@ -61,7 +67,7 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "Feature 3",
+                    title: "Socio Economic Blogs",
                     description: "Description of feature 3",
                     onTap: () {
                       Navigator.push(context,
@@ -69,7 +75,7 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "Feature 4",
+                    title: "more...",
                     description: "Description of feature 4",
                     onTap: () {
                       Navigator.push(context,
