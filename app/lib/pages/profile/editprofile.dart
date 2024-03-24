@@ -60,6 +60,24 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 hintText: 'Write a short bio',
               ),
             ),
+            SizedBox(height: 8),
+            TextField(
+              controller: _bioController,
+              maxLines: 3,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter your Family Income',
+              ),
+            ),
+            SizedBox(height: 8),
+            TextField(
+              controller: _bioController,
+              maxLines: 3,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter your Intrests',
+              ),
+            ),
             SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {

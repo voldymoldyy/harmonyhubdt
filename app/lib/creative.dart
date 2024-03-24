@@ -2,6 +2,7 @@ import 'package:app/components/Featured_card.dart';
 import 'package:app/components/home_topbutton.dart';
 import 'package:app/components/homeheading.dart';
 import 'package:app/pages/creative%20blogs/blog1.dart';
+import 'package:app/pages/creative%20blogs/blog10.dart';
 import 'package:app/pages/creative%20blogs/blog2.dart';
 import 'package:app/pages/creative%20blogs/blog3.dart';
 import 'package:app/pages/creative%20blogs/blog4.dart';
@@ -10,23 +11,23 @@ import 'package:app/pages/creative%20blogs/blog6.dart';
 import 'package:app/pages/creative%20blogs/blog7.dart';
 import 'package:app/pages/creative%20blogs/blog8.dart';
 import 'package:app/pages/creative%20blogs/blog9.dart';
-import 'package:app/pages/culture%20blogs/blog1.dart';
+
 import 'package:flutter/material.dart';
 
-class ExplorePage extends StatelessWidget {
-  const ExplorePage({super.key});
+class Creative extends StatelessWidget {
+  const Creative({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Explore"),
+        title: const Text("Creative Blogs"),
       ),
       body: SafeArea(
         child: Column(
           children: [
             HomeTopButton(),
             HomeHeading(
-              title: "Explore more",
+              title: "Creative",
               trailing: TextButton(
                 child: Text("View All"),
                 onPressed: () {},
@@ -41,8 +42,8 @@ class ExplorePage extends StatelessWidget {
                 crossAxisSpacing: 10,
                 children: [
                   FeatureCard(
-                    title: "Culture Blogs",
-                    description: "Description of feature 1",
+                    title: "blog 1",
+                    description: "Cultural Chronicles",
                     onTap: () {
                       Navigator.push(
                           context,
@@ -51,18 +52,8 @@ class ExplorePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "Creative Blogs",
-                    description: "Description of feature 2",
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => creativeblog1()));
-                    },
-                  ),
-                  FeatureCard(
-                    title: "Socio Economic Blogs",
-                    description: "Description of feature 3",
+                    title: "blog2",
+                    description: "Artistic Expressions",
                     onTap: () {
                       Navigator.push(
                           context,
@@ -71,8 +62,8 @@ class ExplorePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "more...",
-                    description: "Description of feature 4",
+                    title: "blog3",
+                    description: "Literary Luminaries",
                     onTap: () {
                       Navigator.push(
                           context,
@@ -81,8 +72,8 @@ class ExplorePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "more...",
-                    description: "Description of feature 4",
+                    title: "blog4",
+                    description: "Culinary Crossroads",
                     onTap: () {
                       Navigator.push(
                           context,
@@ -91,8 +82,8 @@ class ExplorePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "more...",
-                    description: "Description of feature 4",
+                    title: "blog5",
+                    description: "Global Gazetteer",
                     onTap: () {
                       Navigator.push(
                           context,
@@ -101,8 +92,8 @@ class ExplorePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "more...",
-                    description: "Description of feature 4",
+                    title: "blog6",
+                    description: "Theater Tales",
                     onTap: () {
                       Navigator.push(
                           context,
@@ -111,8 +102,18 @@ class ExplorePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "more...",
-                    description: "Description of feature 4",
+                    title: "blog7",
+                    description: "Musical Mosaic",
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => creativeblog6()));
+                    },
+                  ),
+                  FeatureCard(
+                    title: "blog8",
+                    description: "Festival Frenzy",
                     onTap: () {
                       Navigator.push(
                           context,
@@ -121,8 +122,8 @@ class ExplorePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "more...",
-                    description: "Description of feature 4",
+                    title: "blog9",
+                    description: "Heritage Hub",
                     onTap: () {
                       Navigator.push(
                           context,
@@ -131,33 +132,13 @@ class ExplorePage extends StatelessWidget {
                     },
                   ),
                   FeatureCard(
-                    title: "more...",
+                    title: "blog10",
                     description: "Description of feature 4",
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => creativeblog9()));
-                    },
-                  ),
-                  FeatureCard(
-                    title: "more...",
-                    description: "Description of feature 4",
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => creativeblog9()));
-                    },
-                  ),
-                  FeatureCard(
-                    title: "more...",
-                    description: "Description of feature 4",
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => cultureblog1()));
                     },
                   ),
                 ],

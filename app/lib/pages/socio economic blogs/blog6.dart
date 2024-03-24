@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class blog4 extends StatelessWidget {
-  const blog4({super.key});
+class seblog6 extends StatelessWidget {
+  const seblog6({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Blog4"),
+        title: Text("Blog6"),
       ),
     );
   }

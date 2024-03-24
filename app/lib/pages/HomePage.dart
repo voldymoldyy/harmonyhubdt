@@ -2,11 +2,13 @@ import 'package:app/auth/auth_serivce.dart';
 import 'package:app/components/Featured_card.dart';
 import 'package:app/components/home_topbutton.dart';
 import 'package:app/components/homeheading.dart';
+import 'package:app/creative.dart';
+import 'package:app/culture.dart';
+import 'package:app/more.dart';
 import 'package:app/pages/ExplorePage.dart';
-import 'package:app/pages/blogs/blog1.dart';
-import 'package:app/pages/blogs/blog2.dart';
-import 'package:app/pages/blogs/blog3.dart';
-import 'package:app/pages/blogs/blog4.dart';
+import 'package:app/pages/culture%20blogs/blog3.dart';
+import 'package:app/pages/culture%20blogs/blog4.dart';
+import 'package:app/pages/socioecopage.dart';
 import 'package:flutter/material.dart';
 
 void logout() {
@@ -50,36 +52,38 @@ class HomePage extends StatelessWidget {
                 children: [
                   FeatureCard(
                     title: "Culture Blogs",
-                    description: "Description of feature 1",
+                    description:
+                        "Culture blogs are online spaces where writers explore and analyze various aspects of society, including art, literature, music, film, fashion, and more.",
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const blog1()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Culture()));
                     },
                   ),
                   FeatureCard(
                     title: "Creative Blogs",
-                    description: "Description of feature 2",
+                    description:
+                        "Creative blogs are digital platforms where individuals or groups share innovative ideas, artistic inspiration, and unique perspectives on various creative endeavors.",
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => blog2()));
+                          MaterialPageRoute(builder: (context) => Creative()));
                     },
                   ),
                   FeatureCard(
                     title: "Socio Economic Blogs",
-                    description: "Description of feature 3",
+                    description:
+                        "Socio-economic blogs are digital platforms where experts and enthusiasts analyze and discuss the intersection of society.",
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => blog3()));
+                          MaterialPageRoute(builder: (context) => Socio_eco()));
                     },
                   ),
                   FeatureCard(
                     title: "more...",
-                    description: "Description of feature 4",
+                    description:
+                        "Create your Creator Account to publish your own blogs, increase reach and gain followers.",
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => blog4()));
+                          MaterialPageRoute(builder: (context) => more()));
                     },
                   ),
                 ],
